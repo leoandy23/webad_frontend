@@ -3,11 +3,7 @@ import axios from "axios";
 const API_URL = "https://webadbackend-production.up.railway.app/auth";
 
 export const login = async (email: string, password: string) => {
-  const response = await axios.post(
-    `${API_URL}/login`,
-    { email, password },
-    { withCredentials: true }
-  );
+  const response = await axios.post(`${API_URL}/login`, { email, password });
   if (response.data.access_token) {
     localStorage.setItem("user", JSON.stringify(response.data.user));
     localStorage.setItem("access_token", response.data.access_token);
@@ -21,28 +17,26 @@ export const register = async (
   firstName: string,
   lastName: string
 ) => {
-  const response = await axios.post(
-    `${API_URL}/register`,
-    { email, password, first_name: firstName, last_name: lastName },
-    { withCredentials: true }
-  );
+  const response = await axios.post(`${API_URL}/register`, {
+    email,
+    password,
+    first_name: firstName,
+    last_name: lastName,
+  });
   return response.data;
 };
 
 export const sendResetPasswordEmail = async (email: string) => {
-  const response = await axios.post(
-    `${API_URL}/send-reset-password-email`,
-    { email },
-    { withCredentials: true }
-  );
+  const response = await axios.post(`${API_URL}/send-reset-password-email`, {
+    email,
+  });
   return response.data;
 };
 
 export const resetPassword = async (token: string, password: string) => {
   const response = await axios.post(
     `${API_URL}/reset-password?token=${token}`,
-    { password },
-    { withCredentials: true }
+    { password }
   );
   return response.data;
 };
