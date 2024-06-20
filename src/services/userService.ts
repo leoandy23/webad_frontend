@@ -1,7 +1,7 @@
 import axios from "axios";
 import { User } from "@/models/user";
 
-const API_URL = "http://localhost:3001";
+const API_URL = "http://webadbackend-production.up.railway.app";
 
 export const getAllUsers = async (token: string): Promise<User[]> => {
   const response = await axios.get(`${API_URL}/users`, {

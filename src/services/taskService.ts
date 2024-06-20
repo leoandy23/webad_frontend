@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Task } from "@/models/task";
 
-const API_URL = "http://localhost:3001";
+const API_URL = "http://webadbackend-production.up.railway.app";
 
 export const getTasksByProjectId = async (
   projectId: number,
