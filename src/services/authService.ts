@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://webadbackend-production.up.railway.app/auth";
+const API_URL = "https://webadbackend-production.up.railway.app/auth";
 
 export const login = async (email: string, password: string) => {
   const response = await axios.post(

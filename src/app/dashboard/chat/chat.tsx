@@ -7,7 +7,7 @@ import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
 import BackButton from "@/components/backButton";
 
-const socket = io("http://webadbackend-production.up.railway.app/chat"); // Cambia esta URL si tu backend está en otra dirección
+const socket = io("https://webadbackend-production.up.railway.app/chat"); // Cambia esta URL si tu backend está en otra dirección
 
 const Chat = () => {
   const router = useRouter();

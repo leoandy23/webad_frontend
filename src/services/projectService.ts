@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Project } from "@/models/project";
 
-const API_URL = "http://webadbackend-production.up.railway.app"; // Asegúrate de que esta sea la URL correcta de tu API
+const API_URL = "https://webadbackend-production.up.railway.app"; // Asegúrate de que esta sea la URL correcta de tu API
 
 export const getRecentProjects = async (
   userId: number,
